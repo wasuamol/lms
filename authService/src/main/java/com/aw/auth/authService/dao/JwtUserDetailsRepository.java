@@ -11,14 +11,14 @@ public class JwtUserDetailsRepository {
 	  private static final String encrptedPass = "$2a$10$slYQmyNdGzTn7ZLBXBChFOC9f6kFjAqPhccnP6DxlWXx2lPk1C3G6";  //password
 			   
 		public User getUser(String usserName) throws UsernameNotFoundException {
-			if ("amol".equals(usserName)) {
-				return new User("amol", encrptedPass ,
+			if ("amol@gmail.com".equals(usserName)) {
+				return new User("amol@gmail.com", encrptedPass ,
 						new ArrayList<>());
-			}else if ("john".equals(usserName)) {
-				return new User("john", encrptedPass,
+			}else if ("john@gmail.com".equals(usserName)) {
+				return new User("john@gmail.com", encrptedPass,
 						new ArrayList<>());
-			}else if ("sundar".equals(usserName)) {
-				return new User("sundar", encrptedPass,
+			}else if ("sundar@gmail.com".equals(usserName)) {
+				return new User("sundar@gmail.com", encrptedPass,
 						new ArrayList<>());
 			}else {
 				throw new UsernameNotFoundException("User not found with username: " + usserName);
